@@ -8,11 +8,9 @@ public:
             sum += d;
             prod *= d ;
 
-            n = n/10;
+            n/=10;
         }
 
-           int ans =  sum + prod;
-           if(m % ans == 0) return true;
-           else return false;
+         return (m % (sum + prod)) == 0;
     }
 };
