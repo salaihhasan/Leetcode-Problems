@@ -21,6 +21,7 @@ public:
             ans.push_back(data);
             
         }
+        
         sort(ans.begin(), ans.end());
         return ans;
     }
