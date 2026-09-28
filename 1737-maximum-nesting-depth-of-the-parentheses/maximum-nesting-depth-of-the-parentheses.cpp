@@ -3,14 +3,18 @@ public:
     int maxDepth(string s) {
         stack<char>st;
         int x = 0;
-        for(int i = 0; i < s.size();i++){
-            if(s[i] == '('){
-                st.push(s[i]);
-                x = max(x, (int)st.size());
-            } 
-            else if(s[i] ==')' ){
-                st.pop();
-            } 
+
+        for(char ch : s){
+            if(ch == '('){
+                st.push(ch);
+                x = max(x, (int) st.size());
+            }
+
+           else if (ch == ')') {
+                if (!st.empty()) {
+                    st.pop();
+                }
+           }
         }
         return x;
     }
