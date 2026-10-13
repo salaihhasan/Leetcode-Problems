@@ -17,8 +17,6 @@ public:
                 grid[i][j] += min(grid[i - 1][j], grid[i][j - 1]);
             }
         }
-
-        // The bottom-right corner holds the minimum path sum
         return grid[n - 1][m - 1];
     }
 };
