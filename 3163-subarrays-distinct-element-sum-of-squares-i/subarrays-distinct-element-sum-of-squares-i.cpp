@@ -4,14 +4,10 @@ public:
         int n = nums.size();
         int sum = 0;
         for(int i = 0; i < n; i++){
+            unordered_set<int>us;
             for(int j = i; j < n; j++){
-                unordered_set<int>us;
-                for(int k = i; k <= j; k++){
-                    us.insert(nums[k]);
-                }
-
-                sum += pow(us.size(),2);
-                
+                    us.insert(nums[j]);
+                sum += pow(us.size(),2);  
             }
         }
         return sum;
