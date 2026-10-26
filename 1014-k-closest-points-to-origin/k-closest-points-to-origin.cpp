@@ -5,7 +5,7 @@ public:
         vector<vector<int>>ans;
         priority_queue<pii>pq;
         for(int i = 0; i < points.size();i++){
-            int dist = pow(points[i][0],2) + pow(points[i][1],2);
+            int dist = points[i][0] * points[i][0] + points[i][1] * points[i][1];
             pq.push({dist,points[i]});
             if(pq.size()>k)pq.pop();
         }
