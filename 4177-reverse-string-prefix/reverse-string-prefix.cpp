@@ -7,7 +7,10 @@ public:
             st.push(s[i]);
         }
         for(int i = 0; i < s.size();i++){
-            if(i < k){ s1 += st.top(); st.pop();}
+            if(i < k){ 
+                s1 += st.top();
+                st.pop();
+            }
             else s1 += s[i];
         }
         return s1;
