@@ -15,14 +15,12 @@ public:
             }
             else {
                 need--;
-
                 if (need < 0) {
                     ans++;
                     need = 1;
                 }
             }
         }
-
         return ans + need;
     }
 };
