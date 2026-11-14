@@ -5,7 +5,7 @@ public:
         int sum = 0;
         int n = nums.size();
         for(int i = n-2; i >= 0; i--){
-            sum += abs(nums[i] - nums[n-1]);
+            sum += nums[n-1] - nums[i];
         }
         return sum;
     }
