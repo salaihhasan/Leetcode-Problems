@@ -6,8 +6,7 @@ public:
         for(int i = 0; i < heights.size();i++){
             pr.push_back({heights[i],i});
         }
-        sort(pr.begin(), pr.end());
-        reverse(pr.begin(), pr.end());
+        sort(pr.rbegin(), pr.rend()); // sort in decending order
         for(int i = 0; i < names.size();i++){
             ans.push_back(names[pr[i].second]);
         }
